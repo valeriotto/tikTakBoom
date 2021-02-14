@@ -30,6 +30,64 @@ tikTakBoom = {
 
     },
 
+    /************************/
+    /*чтение и проверка JSON*/
+    /************************/
+    readJSON() {
+        try { // попытка чтения файла и проверка ошибок
+            this.tasks = JSON.parse(tasks);
+            if (this.tasks.length < 1) { // ! пока ограничил проверку всего по 1 вопросу
+                throw new Error('Вопросов меньше 30!');
+            }
+
+
+            //проверка всего JSON на условия
+            for (quest of this.tasks) {
+
+                // вопрос присутствует и ответы не присутствуют
+                if (!quest.chekParametr(`question`) || !quest.chekParametr(`answer1`) || !quest.chekParametr(`answer2`) ||
+                    !quest.chekParametr(`answer3`) || !quest.chekParametr(`answer4`) || !quest.chekParametr(`answer5`)) {
+                    throw new Error(`Проверьте наличие всех вопросов и ответов, они не должны быть пустыми!`);
+                }
+
+                // проверка ответов на правильность и заполненность
+                let questAnswer1 = quest.answer1;
+                let questAnswer2 = quest.answer2;
+                let questAnswer3 = quest.answer3;
+                let questAnswer4 = quest.answer4;
+                let questAnswer5 = quest.answer5;
+
+                if (!questAnswer1.chekParametr(`result`) || !questAnswer1.chekParametr(`value`) ||
+                    !questAnswer2.chekParametr(`result`) || !questAnswer2.chekParametr(`value`) ||
+                    !questAnswer3.chekParametr(`result`) || !questAnswer3.chekParametr(`value`) ||
+                    !questAnswer4.chekParametr(`result`) || !questAnswer4.chekParametr(`value`) ||
+                    !questAnswer5.chekParametr(`result`) || !questAnswer5.chekParametr(`value`)) {
+                    throw new Error(`Проверьте ответы, они не должны быть пустыми и должен быть правильный ответ!`);
+                }
+
+                // проверка двух правильных ответов
+                let newArrayForAnswerRitgh = [ // массив из ответов
+                    questAnswer1.result,
+                    questAnswer2.result,
+                    questAnswer3.result,
+                    questAnswer4.result,
+                    questAnswer5.result];
+
+                let trueAnswer = false;
+                const err = () => { throw new Error(`В поросах присутствуют 2 верных ответа!`) };
+
+                for (let j = 0; j < newArrayForAnswerRitgh.length; j++) { // проверяем каждый ответ в массиве
+                    if (newArrayForAnswerRitgh[j]) {
+                        trueAnswer ? err() : trueAnswer = true;
+                    }
+                }
+            }
+
+            return true; // TODO если все условия выполнились, возвращаем истину и добавляем в метод run на проверку через if
+        } catch {
+            return true;
+        }
+    },
 
     startTimer() {
         //скрываем ненужные поля
@@ -52,28 +110,31 @@ tikTakBoom = {
     },
 
     run() {
-        this.gameStatusField.innerText = 'Игра идет';
+        if (this.readJSON()) {
+            this.gameStatusField.innerText = 'Игра идет';
 
-        // присваиваем значение введенное пользователем к таймеру и количеству игроков
-        this.boomTimer = parseInt(inputTime.value) || 30;
-        this.countOfPlayers = parseInt(inputCountOfPlayers.value) || 2;
+            // присваиваем значение введенное пользователем к таймеру и количеству игроков
+            this.boomTimer = parseInt(inputTime.value) || 30;
+            this.countOfPlayers = parseInt(inputCountOfPlayers.value) || 2;
 
-        //обнуляем поля ввода
-        inputTime.value = '';
-        inputCountOfPlayers.value = '';
+            //обнуляем поля ввода
+            inputTime.value = '';
+            inputCountOfPlayers.value = '';
 
-        this.state = 1;
+            this.state = 1;
 
-        this.rightAnswers = 0;
+            this.rightAnswers = 0;
 
-        this.turnOn();
+            this.turnOn();
 
-        this.timer();
+            this.timer();
 
-        //выводим нужные поля
-        inGameBlock.style.display = 'inline';
+            //выводим нужные поля
+            inGameBlock.style.display = 'inline';
 
-        this.gameStatusField.style.display = 'inline';
+            this.gameStatusField.style.display = 'inline';
+        }
+
     },
 
     turnOn() {
