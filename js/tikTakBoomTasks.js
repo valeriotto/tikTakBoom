@@ -2,27 +2,39 @@ const tasks = `
     [
         {
             "question": "2 * 2 = ",
-            "answer1": { "result": true, "value": "4" },
-            "answer2": { "result": false, "value": "3" }
+            "answer1": { "result": false, "value": "3" },
+            "answer2": { "result": true, "value": "4" },
+            "answer3": { "result": false, "value": "тест" },
+            "answer4": { "result": false, "value": "тест" },
+            "answer5": { "result": false, "value": "тест" }
         },
         {
             "question": "Как зовут крокодила, лучшего друга Чебурашки?",
             "answer1": { "result": false, "value": "Данди" },
-            "answer2": { "result": true, "value": "Гена" }
+            "answer2": { "result": true, "value": "Гена" },
+            "answer3": { "result": false, "value": "тест" },
+            "answer4": { "result": false, "value": "тест" },
+            "answer5": { "result": false, "value": "тест" }
         },
         {
             "question": "5 + 5",
             "answer1": { "result": false, "value": "1" },
-            "answer2": { "result": true, "value": "10" }
+            "answer2": { "result": true, "value": "10" },
+            "answer3": { "result": false, "value": "тест" },
+            "answer4": { "result": false, "value": "тест" },
+            "answer5": { "result": false, "value": "тест" }
         },
         {
             "question": "Столица Италии?",
             "answer1": { "result": false, "value": "Ватикан" },
-            "answer2": { "result": true, "value": "Рим" }
+            "answer2": { "result": true, "value": "Рим" },
+            "answer3": { "result": false, "value": "тест" },
+            "answer4": { "result": false, "value": "тест" },
+            "answer5": { "result": false, "value": "тест" }
         }
     ]
 `;
-
+/*
 const tasks1 = `
 [
     {
@@ -70,7 +82,7 @@ const tasks1 = `
         "answer1": { "result": false, "value": "Прыжки в воду" },
         "answer2": { "result": true, "value": "Прыжки в высоту" }
     },
-    
+
     {
         "question": "Высшая оценка в фигургом катании.",
         "answer1": { "result": false, "value": "5+" },
@@ -176,5 +188,5 @@ const tasks1 = `
         "answer1": { "result": true, "value": "Баран" },
         "answer2": { "result": false, "value": "Козел" }
     },
-    
-]`
+
+]`*/
