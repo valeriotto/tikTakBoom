@@ -27,8 +27,8 @@ const tasks = `
     {
         "question": "Марафонский забег - длина дистанции?",
         "answer1": { "result": false, "value": "500 м" },
-        "answer2": { "result": false, "value": "10000 м" },
-        "answer3": { "result": true, "value": "42195 м" },
+        "answer2": { "result": true, "value": "42195 м" },
+        "answer3": { "result": false, "value": "10000 м" },
         "answer4": { "result": false, "value": "50500 м" },
         "answer5": { "result": false, "value": "100 м" }
     },
@@ -43,24 +43,24 @@ const tasks = `
     {
         "question": "Пеле.",
         "answer1": { "result": false, "value": "Боксер" },
-        "answer2": { "result": false, "value": "Штангист" },
-        "answer3": { "result": true, "value": "Футболист" },
+        "answer2": { "result": true, "value": "Футболист" },
+        "answer3": { "result": false, "value": "Штангист" },
         "answer4": { "result": false, "value": "Пловец" },
         "answer5": { "result": false, "value": "Баскетболист" }
     },
     {
         "question": "Тайм в футболе.",
         "answer1": { "result": false, "value": "20 мин" },
-        "answer2": { "result": false, "value": "90 мин" },
-        "answer3": { "result": true, "value": "45 мин" },
+        "answer2": { "result": true, "value": "45 мин" },
+        "answer3": { "result": false, "value": "90 мин" },
         "answer4": { "result": false, "value": "30 мин" },
         "answer5": { "result": false, "value": "5 мин" }
     },
     {
         "question": "Штрафной удар в футболе.",
         "answer1": { "result": false, "value": "С разворота" },
-        "answer2": { "result": false, "value": "Буллит" },
-        "answer3": { "result": true, "value": "Пенальти" },
+        "answer2": { "result": true, "value": "Пенальти" },
+        "answer3": { "result": false, "value": "Буллит" },
         "answer4": { "result": false, "value": "Трехочковый" },
         "answer5": { "result": false, "value": "В лоб" }
     },
@@ -76,10 +76,10 @@ const tasks = `
     {
         "question": "Высшая оценка в фигургом катании.",
         "answer1": { "result": false, "value": "100%" },
-        "answer2": { "result": false, "value": "5+" },
+        "answer2": { "result": true, "value": "6.0" }
+        "answer5": { "result": false, "value": "5+" },
         "answer3": { "result": false, "value": "10" },
         "answer4": { "result": false, "value": "Великолепно" },
-        "answer5": { "result": true, "value": "6.0" }
     },
     {
         "question": "Тройной тулуп.",
@@ -92,16 +92,16 @@ const tasks = `
     {
         "question": "Оружие биатлониста.",
         "answer1": { "result": false, "value": "Катапульта" },
-        "answer2": { "result": false, "value": "Арбалет" },
+        "answer2": { "result": true, "value": "Ружьё" },
+        "answer4": { "result": false, "value": "Арбалет" },
         "answer3": { "result": false, "value": "Пулемёт" },
-        "answer4": { "result": true, "value": "Ружьё" },
         "answer5": { "result": false, "value": "Копьё" }
     },
     {
         "question": "Олимпийский девиз: \\"Быстрее, выше, ...\\".",
         "answer1": { "result": false, "value": "Круче" },
-        "answer2": { "result": false, "value": "Слабее" },
-        "answer3": { "result": true, "value": "Сильнее" },
+        "answer2": { "result": true, "value": "Сильнее" },
+        "answer3": { "result": false, "value": "Слабее" },
         "answer4": { "result": false, "value": "Ещё выше" },
         "answer5": { "result": false, "value": "Ну хоть как-нибудь" }
     },
@@ -124,8 +124,8 @@ const tasks = `
     {
         "question": "Профессиональный стиль плавания.",
         "answer1": { "result": false, "value": "Топориком" },
-        "answer2": { "result": false, "value": "Баттерфляй" },
-        "answer3": { "result": true, "value": "По-собачьи" },
+        "answer2": { "result": true, "value": "По-собачьи" },
+        "answer3": { "result": false, "value": "Баттерфляй" },
         "answer4": { "result": false, "value": "Со спасательным кругом" },
         "answer5": { "result": false, "value": "На надувном матрасе" }
     },
@@ -156,18 +156,18 @@ const tasks = `
     {
         "question": "На чем играют в кёрлинг?",
         "answer1": { "result": false, "value": "Вода" },
-        "answer2": { "result": false, "value": "Паркет" },
-        "answer3": { "result": true, "value": "Лёд" },
+        "answer2": { "result": true, "value": "Лёд" },
+        "answer3": { "result": false, "value": "Паркет" },
         "answer4": { "result": false, "value": "Трава" },
         "answer5": { "result": false, "value": "Асфальт" }
     },
     {
         "question": "Игровое время в хоккее.",
         "answer1": { "result": false, "value": "Тайм" },
-        "answer2": { "result": false, "value": "Сет" },
+        "answer2": { "result": true, "value": "Период" }
+        "answer5": { "result": false, "value": "Сет" },
         "answer3": { "result": false, "value": "Четверть" },
         "answer4": { "result": false, "value": "Гейм" },
-        "answer5": { "result": true, "value": "Период" }
     },
     {
         "question": "Что показывает футбольный судья, удаляемому с поля за нарушение игроку?",
@@ -188,20 +188,12 @@ const tasks = `
     {
         "question": "Голеадор.",
         "answer1": { "result": false, "value": "Справедливый судья" },
-        "answer2": { "result": false, "value": "Активный болельщик" },
+        "answer2": { "result": true, "value": "Хороший нападающий" }
+        "answer5": { "result": false, "value": "Активный болельщик" },
         "answer3": { "result": false, "value": "Хороший вратарь" },
         "answer4": { "result": false, "value": "Запасной игрок" },
-        "answer5": { "result": true, "value": "Хороший нападающий" }
     },
-    {
-        "question": "Предмет мебели в хоккейном штрафном боксе.",
-        "answer1": { "result": false, "value": "Круглый стол" },
-        "answer1": { "result": true, "value": "Скамейка штрафников" },
-        "answer1": { "result": false, "value": "Мягкий диван" },
-        "answer1": { "result": false, "value": "Барная стойка" },
-        "answer2": { "result": false, "value": "Скамья подсудимых" }
-    },
-    {
+     {
         "question": "Спортивный снаряд для метания.",
         "answer1": { "result": false, "value": "Наковальня" },
         "answer2": { "result": false, "value": "Верстак" },
@@ -220,10 +212,10 @@ const tasks = `
     {
         "question": "Вид борьбы.",
         "answer1": { "result": false, "value": "Афроамериканская" },
-        "answer2": { "result": false, "value": "Чехословацкая" },
+        "answer2": { "result": true, "value": "Греко римская" }
+        "answer5": { "result": false, "value": "Чехословацкая" },
         "answer3": { "result": false, "value": "Восточноевропейская" },
         "answer4": { "result": false, "value": "Юго-западная" },
-        "answer5": { "result": true, "value": "Греко римская" }
     },
     {
         "question": "Одежда каратиста.",
