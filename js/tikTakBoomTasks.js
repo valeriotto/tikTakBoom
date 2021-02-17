@@ -72,14 +72,21 @@ const tasks = `
         "answer4": { "result": false, "value": "Прыжки на батуте" },
         "answer5": { "result": false, "value": "Бег с препятствиями" }
     },
-
     {
         "question": "Высшая оценка в фигургом катании.",
         "answer1": { "result": false, "value": "100%" },
-        "answer2": { "result": true, "value": "6.0" }
+        "answer2": { "result": true, "value": "6.0" },
         "answer5": { "result": false, "value": "5+" },
         "answer3": { "result": false, "value": "10" },
-        "answer4": { "result": false, "value": "Великолепно" },
+        "answer4": { "result": false, "value": "Великолепно" }
+    },
+    {
+        "question": "Родина хоккея с шайбой.",
+            "answer1": { "result": true, "value": "Канада" },
+            "answer2": { "result": false, "value": "Швеция" },
+            "answer3": { "result": false, "value": "Финляндия" },
+            "answer4": { "result": false, "value": "Россия" },
+            "answer5": { "result": false, "value": "Австралия" }
     },
     {
         "question": "Тройной тулуп.",
@@ -164,10 +171,10 @@ const tasks = `
     {
         "question": "Игровое время в хоккее.",
         "answer1": { "result": false, "value": "Тайм" },
-        "answer2": { "result": true, "value": "Период" }
+        "answer2": { "result": true, "value": "Период" },
         "answer5": { "result": false, "value": "Сет" },
         "answer3": { "result": false, "value": "Четверть" },
-        "answer4": { "result": false, "value": "Гейм" },
+        "answer4": { "result": false, "value": "Гейм" }
     },
     {
         "question": "Что показывает футбольный судья, удаляемому с поля за нарушение игроку?",
@@ -188,10 +195,10 @@ const tasks = `
     {
         "question": "Голеадор.",
         "answer1": { "result": false, "value": "Справедливый судья" },
-        "answer2": { "result": true, "value": "Хороший нападающий" }
+        "answer2": { "result": true, "value": "Хороший нападающий" },
         "answer5": { "result": false, "value": "Активный болельщик" },
         "answer3": { "result": false, "value": "Хороший вратарь" },
-        "answer4": { "result": false, "value": "Запасной игрок" },
+        "answer4": { "result": false, "value": "Запасной игрок" }
     },
      {
         "question": "Спортивный снаряд для метания.",
@@ -212,10 +219,10 @@ const tasks = `
     {
         "question": "Вид борьбы.",
         "answer1": { "result": false, "value": "Афроамериканская" },
-        "answer2": { "result": true, "value": "Греко римская" }
+        "answer2": { "result": true, "value": "Греко римская" },
         "answer5": { "result": false, "value": "Чехословацкая" },
         "answer3": { "result": false, "value": "Восточноевропейская" },
-        "answer4": { "result": false, "value": "Юго-западная" },
+        "answer4": { "result": false, "value": "Юго-западная" }
     },
     {
         "question": "Одежда каратиста.",
