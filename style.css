@@ -1,19 +1,21 @@
 body {
-    font-family: 'Share Tech Mono', monospace;
+    font-family: "Share Tech Mono", monospace;
 }
 
-.timer-output{
+.timer-output {
     width: 200px;
-    background: #222;
-    color: darkred;
+    background: rgb(53, 48, 112);
+    color: rgb(233, 77, 16);
     padding: 16px 8px;
     font-size: 64px;
     text-align: center;
     line-height: 1;
     user-select: none;
+    border: 5px solid rgb(100, 9, 9);
+    border-radius: 10px;
 }
 
-.timer-output-wrapper{
+.timer-output-wrapper {
     width: calc(100% - 24px);
     display: flex;
     flex-direction: row;
@@ -22,6 +24,56 @@ body {
     margin: 12px;
 }
 
-#inGameBlock{
-    display: none;
+.container {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-right: 50px;
+    padding-left: 50px;
+    background-color: rgb(122, 243, 106);
+    border: 5px solid brown;
+    border-radius: 10px;
+}
+
+.Head {
+    color: rgb(6, 6, 153);
+}
+
+.imgBomb {
+    padding-left: 120px;
+    padding-top: 20px;
+}
+
+#gameRun {
+    border: 2px solid white;
+    color: rgb(241, 241, 214);
+    background-color: green;
+}
+
+.input-group-btn {
+    padding: 0px 5px;
+}
+
+#inGameBlock {
+    padding-top: 5px;
+}
+
+#answer1,
+#answer2,
+#answer3,
+#answer4,
+#answer5,
+#gameFinish {
+    border: 2px solid white;
+    cursor: pointer;
+}
+
+#gameStatusField {
+    border: 1px solid black;
+    height: 50px;
+    color: rgb(7, 7, 148);
+}
+
+#inputCountOfPlayers,
+#inputTime {
+    border: 1px solid black;
 }

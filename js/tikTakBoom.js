@@ -36,7 +36,7 @@ tikTakBoom = {
     readJSON() {
         try { // попытка чтения файла и проверка ошибок
             this.tasks = JSON.parse(tasks);
-            if (this.tasks.length < 1) { // ! пока ограничил проверку всего по 1 вопросу
+            if (this.tasks.length < 29) { // проверка вопросов
                 throw new Error('Вопросов меньше 30!');
             }
 
